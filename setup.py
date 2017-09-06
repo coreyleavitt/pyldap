@@ -69,10 +69,8 @@ f.close()
 
 # -- A class describing the features and requirements of OpenLDAP 2.0
 class OpenLDAP2:
-    library_dirs = [
-        os.path.join(os.path.dirname(os.path.realpath(__file__)), 'libraries')]
-    include_dirs = [
-        os.path.join(os.path.dirname(os.path.realpath(__file__)), 'include')]
+    library_dirs = [r'libraries\libldap', r'libraries\libldap_r', ]
+    include_dirs = ['include', r'include\ac']
     extra_compile_args = []
     extra_link_args = []
     extra_objects = []
